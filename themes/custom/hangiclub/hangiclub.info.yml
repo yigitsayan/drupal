@@ -1,0 +1,14 @@
+name: Hangi Club
+description: HangiClub Theme
+type: theme
+core: 8.x
+libraries:
+ - hangiclub/global-css
+ - hangiclub/global-js
+stylesheets-remove:
+ - core/themes/stable/css/views/views.module.css
+ - core/themes/stable/css/system/components/align.module.css
+regions: 
+ content: 'Main Content'
+ header:  'Header'
+ footer:  'Footer'
