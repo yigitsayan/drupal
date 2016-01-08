@@ -1,0 +1,26 @@
+{
+  "name": "hangi-club",
+  "description": "Bower dependencies for Hangi Club theme",
+  "main": [
+    "./themes/custom/hangiclub/css/style.css",
+    "./themes/custom/hangiclub/js/main.js"
+  ],
+  "authors": [
+    "Yigit Sayan"
+  ],
+  "license": "--",
+  "homepage": "https://github.com/yigitsayan/drupal",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6",
+    "font-awesome": "fontawesome#~4.5.0"
+  }
+}
