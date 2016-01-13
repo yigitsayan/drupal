@@ -1,0 +1,17 @@
+<!-- Post image -->
+{{ fields.field_image.content }}
+
+<!-- Post header -->
+<header class="post__header">
+    <time class="post__time" datetime="2014-10-17"><span class="time_large">{{ fields.created.content }}</time>
+    <p class="post__meta">Posted by {{ fields.uid.content }}</p>
+    <h2 class="post__title">{{ fields.title.content }}</h2>
+</header>
+
+<div class="post__content">
+    <p class="post__excerpt">{{ fields.body.content }}</p>
+</div>
+
+<div class="post__button">
+    {{ fields.view_node.content }}
+</div>

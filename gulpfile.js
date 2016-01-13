@@ -37,7 +37,7 @@ gulp.task('icons', function() {
 
 gulp.task('concatjs', function(){
     return gulp
-        .src([config.bowerDir + '/bootstrap-sass/assets/javascripts/bootstrap.js', config.cssPath + '/lib/main.js'])
+        .src([config.bowerDir + '/bootstrap-sass/assets/javascripts/bootstrap.js', config.cssPath + '/lib/owl.carousel.js', config.cssPath + '/lib/main.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest(config.cssPath + '/js'));
 
