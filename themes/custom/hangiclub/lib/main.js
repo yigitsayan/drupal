@@ -8,6 +8,15 @@ jQuery(document).ready(function($) {
                 autoPlay : 5000,
                 stopOnHover: true,
             });
+
+            $(".post-slider").owlCarousel({
+                items: 3,
+                nav: false,
+                responsive: true,
+                lazyLoad: true,
+                autoPlay : 5000,
+                stopOnHover: true,
+            });
         });
         $(window).resize();
 });
