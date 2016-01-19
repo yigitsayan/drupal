@@ -19,4 +19,5 @@ jQuery(document).ready(function($) {
             });
         });
         $(window).resize();
+        $('#sticky').scrollToFixed();
 });
