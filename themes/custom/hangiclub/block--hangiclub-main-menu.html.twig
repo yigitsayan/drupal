@@ -1,10 +1,24 @@
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 <nav role="navigation" aria-labelledby="{{ heading_id }}" class="main-header__navigation" id="sticky">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 hidden-xs">{% block content %}
-      {{ content }}
-    {% endblock %}</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 hidden-xs">
+                {% block content %}
+                    {{ content }}
+                {% endblock %}
+            </div>
+        </div>
     </div>
-  </div>
 </nav>
+<button class="menu-button" id="open-button">Open Menu</button>
+<div class="mobile-menu__wrap">
+    <nav class="mobile-menu__nav">
+        <div class="icon-list">
+            <div class="mobile-menu__search">
+                <input id="mobile-search" type="search" placeholder="Arama...">
+            </div>
+            {{ content }}
+        </div>
+    </nav>
+    <button class="close-button" id="close-button"></button>
+</div>

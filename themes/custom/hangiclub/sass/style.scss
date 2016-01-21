@@ -432,11 +432,206 @@ a:hover{
         }
     }
 }
+
 .scroll-to-fixed-fixed {
     width: 100%;
     background: #FFF;
     border: none;
 }
+
+.menu-button {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    margin: 1em;
+    padding: 0;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    font-size: 21px;
+    border: none;
+    color: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
+
+    &:focus{
+        outline: none;
+        -webkit-appearance: none;
+    }
+
+    &:before{
+        content: '\f0c9';
+        position: absolute;
+        color: #000;
+        top: 0;
+        left: 0;
+        font-family: "FontAwesome";
+    }
+
+    &:hover{
+        opacity: 0.6;
+    }
+}
+
+.mobile-menu__wrap {
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+    width: 350px;
+    height: 100%;
+    background: #F7F7F7;
+    padding: 1.5em;
+    font-size: 1.15em;
+    transform: translate3d(-360px,0,0);
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.show-menu .mobile-menu__wrap {
+    webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: -webkit-transform 0.8s;
+    transition: transform 0.8s;
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.mobile-menu__nav {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    ul{
+        margin: 0;
+        padding: 1.5em;
+        list-style: none;
+
+        a{
+            -webkit-transition-duration: 0.9s;
+            transition-duration: 0.9s;
+            webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: -webkit-transform 0.8s;
+            transition: transform 0.8s;
+            -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+            transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+            display: block;
+            padding: 0.8em;
+
+            &:hover{
+                color: #D75752;
+            }
+        }
+    }
+}
+
+.icon-list {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: -webkit-transform 0.8s;
+    transition: transform 0.8s;
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    height: 100%;
+    width: 110%;
+    background: #fff;
+
+    a{
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        -webkit-transition: -webkit-transform 0.8s;
+        transition: transform 0.8s;
+        -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+        transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    }
+}
+
+.mobile-menu__search {
+    display: inline-block;
+
+    &:before{
+        content: '\f002';
+        font-family: "FontAwesome";
+        color: #979797;
+        font-size: 0.8em;
+        position: absolute;
+        top: 18px;
+        left: 1em;
+    }
+}
+
+#mobile-search {
+    display: block;
+    background: #FFF;
+    color: #979797;
+    border: none;
+    font-family: 'Merriweather', serif;
+    font-size: 0.85em;
+    height: 60px;
+    width: calc(100% - 3.5em);
+    padding-left: 3.5em;
+    margin: 0;
+    border-bottom: 1em solid #F7F7F7;
+    margin-bottom: 10px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.42s;
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+
+    &:focus{
+        background: #fff;
+        border: none;
+        -webkit-appearance: none;
+        outline: none;
+        border-bottom: 1em solid #F7F7F7;
+    }
+}
+
+#mobile-search::-webkit-input-placeholder {
+    color: #979797;
+}
+
+#mobile-search:-moz-placeholder { /* Firefox 18- */
+   color: #979797;  
+}
+
+#mobile-search::-moz-placeholder {  /* Firefox 19+ */
+   color: #979797;  
+}
+
+#header-search:-ms-input-placeholder {  
+   color: #979797;  
+}
+
+.close-button {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    right: 1.4em;
+    top: 1.4em;
+    overflow: hidden;
+    background: #4C4C4C;
+    border: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    font-size: 0.7em;
+    font: initial;
+
+    &:after{
+        content: '\f00d';
+        position: absolute;
+        color: #FFF;
+        top: 0.5em;
+        left: 0.6em;
+        font-family: "FontAwesome";
+    }
+}
+
 .slide__caption {
     background: rgba(41, 41, 41, 0.5);
     position: absolute;
@@ -956,6 +1151,93 @@ ul.checklist {
 }
 
 //### single post end ###//
+
+//### twitter block start ###//
+.twitter-feed {
+    padding: 80px 0;
+}
+
+.tweet__header {
+    text-align: center;
+}
+
+.tweet__avatar {
+    display: block;
+    margin: 0 auto;
+    width: 94px;
+
+    img{
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        width: 94px;
+        height: 94px;
+    }
+}
+
+.tweet__author {
+    font-size: 1.2em;
+    font-weight: 900;
+    color: #202020;
+    display: block;
+    margin-top: 20px;
+
+    &:hover{
+        text-decoration: none;
+        color: #202020;
+    }
+}
+
+span.tweet__nick {
+    font-size: 0.8em;
+    font-weight: 400;
+    font-style: italic;
+    color: #838383;
+    display: block;
+}
+
+.tweet__separator {
+    width: 100%;
+    position: relative;
+    margin-top: 25px;
+
+    &:before{
+        left: 0;
+        content: '';
+        position: absolute;
+        top: 16px;
+        height: 1px;
+        background: #eeeeee;
+        width: 42%;
+        display: block;
+    }
+
+    &:after{
+        right: 0;
+        content: '';
+        position: absolute;
+        top: 16px;
+        height: 1px;
+        background: #eeeeee;
+        width: 42%;
+        display: block;
+    }
+
+    i{
+        font-size: 1.7em;
+        color: #05aae5;
+    }
+}
+
+.tweet__content {
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6em;
+    font-size: 1em;
+    border: none !important;
+}
+//### twitter block end ###//
 ////### footer start ###//
 
 footer{
@@ -1020,3 +1302,17 @@ footer{
     margin-top: 33px;
 }
 //### footer end ###//
+
+//### Media specific styles ###//
+@media only screen and (max-width: 767px) {
+
+    .mobile-menu__wrap , .menu-button, .mobile-menu__search,  {
+        display: block;
+    }
+
+    .mobile-menu__wrap a {
+        color: #474747;
+        font-size: 1em;
+        font-weight: 900;
+    }
+}

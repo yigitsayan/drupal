@@ -1,0 +1,42 @@
+<!-- Twitter feed slider -->
+<div class="container">
+<div class="row">
+<div class="col-lg-offset-3 col-lg-6">
+<section class="twitter-feed">
+    {% for tweet in tweets %}
+        <!-- Single Tweet -->
+        <article class="tweet">
+
+
+
+                <!-- head of tweet -->
+                <header class="tweet__header">
+
+                <!-- Tweet author photo -->
+                <div class="tweet__avatar">
+                <img src="{{ tweet.userImage }}" alt="" />
+                </div>
+
+                <!-- Tweet author name and nickname -->
+                <a href="https://twitter.com/hangiclub" target="_blank" class="tweet__author">{{ tweet.screenName }}<span class="tweet__nick">@{{ tweet.username }}</span></a>
+
+                <div class="tweet__separator">
+                <i class="fa fa-twitter"></i>
+                </div>
+
+                </header>
+
+                <blockquote class="tweet__content">
+                <p>{{ tweet.text|raw }}</p>
+                </blockquote>
+
+                
+
+            
+
+        </article><!-- // Tweet -->
+    {% endfor %}
+</section><!-- / Twitter feed slider -->
+</div>
+</div>
+</div>

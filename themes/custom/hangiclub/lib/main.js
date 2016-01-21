@@ -18,6 +18,21 @@ jQuery(document).ready(function($) {
                 stopOnHover: true,
             });
         });
+        $(".twitter-feed").owlCarousel({
+            paginationSpeed : 400,
+            singleItem: true,
+            autoPlay : 4000,
+            stopOnHover: true,
+        });
         $(window).resize();
         $('#sticky').scrollToFixed();
+        Placeholdem( document.querySelectorAll( '[placeholder]' ) );
+
+        $('#open-button').click(function(){
+            $('body').addClass('show-menu');
+        });
+
+        $('#close-button').click(function(){
+            $('body').removeClass('show-menu');
+        });
 });
