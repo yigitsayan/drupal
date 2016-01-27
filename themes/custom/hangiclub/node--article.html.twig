@@ -77,14 +77,6 @@
     {{ content.field_gallery_images }}
   </div>
 
-  <div class="post-content__share">
-    <h3>Share this post:</h3>
-    <ul class="share__icons">
-      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-      <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-    </ul>
-  </div>
+  {% include directory ~ '/partials/share_post.html.twig' %}
 
 </article>

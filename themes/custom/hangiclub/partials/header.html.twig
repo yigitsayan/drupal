@@ -2,9 +2,12 @@
     <div class="main-header__top hidden-xs">
         <div class="container">
             <div class="col-md-6 col-sm-6">
-                <div class="main-hader__search">
-                    <input id="header-search" type="search" placeholder="Arama yapmak için kelime giriniz!">
-                </div>
+                <form action="/search/post" method="get" id="search-block-form" accept-charset="UTF-8" data-drupal-form-fields="edit-keys,edit-submit">
+                    <div class="main-hader__search">
+                        <input id="header-search" type="search" placeholder="Arama yapmak için kelime giriniz!" name="keys" maxlength="128" data-drupal-selector="edit-keys">
+                    </div>
+                </form>
+                
             </div>
             <div class="col-md-6 col-sm-6">
                 <div class="main-header__social">
@@ -20,6 +23,6 @@
     
 
     <div class="fluid-container">
-        {{ page.header }}        
+        {{ page.header }}    
     </div>
 </header>

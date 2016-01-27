@@ -35,4 +35,13 @@ jQuery(document).ready(function($) {
         $('#close-button').click(function(){
             $('body').removeClass('show-menu');
         });
+
+        $('#facebook__share').click(function(){
+            var urlToBePosted = 'http://hangi.club'+$('#urlToBePosted').val();
+            FB.ui(
+                {
+                    method: 'share',
+                    href: urlToBePosted
+                }, function(response){});
+        });
 });

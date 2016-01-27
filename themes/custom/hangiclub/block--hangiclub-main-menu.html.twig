@@ -14,9 +14,11 @@
 <div class="mobile-menu__wrap">
     <nav class="mobile-menu__nav">
         <div class="icon-list">
-            <div class="mobile-menu__search">
-                <input id="mobile-search" type="search" placeholder="Arama...">
-            </div>
+            <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" data-drupal-form-fields="edit-keys,edit-submit">
+                <div class="mobile-menu__search">
+                    <input id="mobile-search" type="search" placeholder="Arama..." name="keys" maxlength="128" data-drupal-selector="edit-keys">
+                </div>
+            </form>
             {{ content }}
         </div>
     </nav>

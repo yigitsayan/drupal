@@ -1,0 +1,48 @@
+<script>
+    // Facebook SDK //
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '1665953720327341',
+            xfbml      : true,
+            version    : 'v2.5'
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    // Twitter SDK //
+    window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+        t._e.push(f);
+        };
+
+        return t;
+    }(document, "script", "twitter-wjs"));
+
+
+</script>
+<div class="post-content__share">
+    <h3>Share this post:</h3>
+    <ul class="share__icons">
+        <li><a href="javascript:void(0);" id="facebook__share"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/intent/tweet?url=http://hangi.club{{ url }}&text={{ node.getTitle() }} hakkında bilgiler&via=hangiclub&hashtags=hangiClub,hangiclub,İzmir,{{ node.getTitle() }}"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://plus.google.com/share?url=http://hangi.club{{ url }}" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-google-plus"></i></a></li>
+    </ul>
+    <input type="hidden" id="urlToBePosted" value="{{ url }}">
+</div>
