@@ -20,8 +20,15 @@
     title_display == 'invisible' ? 'visually-hidden',
     required ? 'js-form-required',
     required ? 'form-required',
+    'col-sm-2',
+    'control-label',
   ]
 %}
 {% if title is not empty or required -%}
   <label{{ attributes.addClass(classes) }}>{{ title }}</label>
 {%- endif %}
+<style type="text/css">
+    .form-horizontal .control-label {
+        padding-top: 0 !important;
+    }
+</style>

@@ -1,0 +1,24 @@
+<?php
+function hangiclub_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+    if ($variables['element']['#form_id'] == 'user_register_form') {
+        $suggestions[] = 'form__' . $variables['element']['#form_id'];
+    }
+}
+
+function hangiclub_theme_suggestions_container_alter(array &$suggestions, array $variables) {
+    if(isset($variables['element']['name']) && isset($variables['element']['mail'])) {
+        $suggestions[] = 'container__user_register_login_form';
+    }
+}
+
+function hangiclub_theme_suggestions_form_element_alter(array &$suggestions, array &$variables) {
+    unset($variables['element']['#description']);
+    //echo '<pre>';print_r($variables['element']['#array_parents']);Exit;
+}
+
+function hangiclub_theme_suggestions_input_alter(array &$suggestions, array &$variables) {
+    if($variables['element']['#type'] == 'hidden') {
+        $variables['element']['#attributes']['class'][] = 'hidden-input';
+    }
+}
+?>
