@@ -12,10 +12,7 @@
  * @ingroup themeable
  */
 #}
-{% if attributes.hasClass('hidden-input') %}
-    <input{{ attributes }} />{{ children }}
-{% else %}
-    <div class="col-sm-10">
-        <input{{ attributes.addClass('form-control') }} />{{ children }}
-    </div>
-{% endif %}
+
+<div class="col-sm-10">
+    <input{{ attributes.addClass('form-control') }} />{{ children }}
+</div>

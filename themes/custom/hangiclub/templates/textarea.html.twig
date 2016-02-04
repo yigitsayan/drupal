@@ -15,6 +15,6 @@
  * @ingroup themeable
  */
 #}
-<div{{ wrapper_attributes }}>
-  <textarea{{ attributes }}>{{ value }}</textarea>
+<div{{ wrapper_attributes.addClass('col-sm-10') }}>
+  <textarea{{ attributes.addClass('form-control') }}>{{ value }}</textarea>
 </div>
