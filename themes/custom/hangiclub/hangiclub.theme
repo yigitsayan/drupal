@@ -23,8 +23,10 @@ function hangiclub_theme_suggestions_input_alter(array &$suggestions, array &$va
     }
 }
 
-function hangiclub_form_comment_form_alter(&$form, &$form_state) {
-    //echo '<pre>';print_r($form['comment_body']);Exit;
-    //unset($form['comment_body']['widget']['#after_build']);
+function hangiclub_preprocess_username(array &$variables) {
+    if(\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical' || \Drupal::routeMatch()->getParameter('node')->getType() == 'article') {
+        $variables['attributes']['href'] = str_replace('hangiclubmember','userposts',$variables['attributes']['href']);
+    }
+
 }
 ?>
